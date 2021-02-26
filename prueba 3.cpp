@@ -35,25 +35,27 @@ int calculadora:: Calcular(int intNumero1, char chrOperador, int intNumero2)
 	 {
 		case '+':
 			resultado = intNumero1 + intNumero2;
-			cout<< "el resultado es: " << resultado << endl;
+			cout<< "el resultado es: " << resultado;
+			return 0;
 		case '-':
 			resultado= intNumero1 - intNumero2;
-			cout<< "el resultado es: " << resultado << endl;
+			cout<< "el resultado es: " << resultado;
+			return 0;
 		case '*':
 			resultado= intNumero1 * intNumero2;
-			cout<< "el resultado es: " << resultado << endl;
-		case '/':
-			
-			if (intNumero2 > 0) 
+			cout<< "el resultado es: " << resultado;
+			return 0;
+		case '/':			
+			if (intNumero2 > 0)
 			{
-				resultado= intNumero1 / intNumero2;
-				cout<< "el resultado es: " << resultado << endl;
+			resultado=  intNumero1 / intNumero2;
+			cout <<"el resultado es:" <<resultado;
 			}
-				else
-				{
-				cout<< "error, el numero debe der mayor que cero " << endl;
+			if(intNumero2 ==0) 
+			{
+				cout<<"Error"<< endl;
 				return 0;
-				}
+			}
 		default:
 			return 0;
 	}
